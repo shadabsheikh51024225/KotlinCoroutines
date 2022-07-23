@@ -11,12 +11,12 @@ import kotlinx.coroutines.runBlocking
  *
  * ====================Three coroutine builders are listed below.=============================
 
-launch: start a coroutine in the background and keep working.
+launch: start a coroutine in the background and keep working./ this will use JOb object to finish the task.
 
 async: perform an asynchronous operation and return a deferred object which is the equivalent of a JavaScript promise.
-We can call await on the deferred value in order to wait and get the result.
+We can call await on the deferred value in order to wait and get the result./ this will give us deferred object, which is kind of generic type.
 
-runBlocking: this blocks the current thread and waits for the coroutine to finish execution.
+runBlocking: this blocks the current thread and waits for the coroutine to finish execution.(Mainly used to test suspend functions).
  *
  * */
 
