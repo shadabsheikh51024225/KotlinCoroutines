@@ -24,9 +24,15 @@ fun main() = runBlocking {
         {
             println("I have catch the exceptions no worries ")
         }finally {
-            println("Finally gonna help me into this...")
-        }
+            //finally block can not execute the suspend functions.
+                // withContext is a coroutine builder and its is gonna start another
+                    // coroutine in different scope to run this suspend function.
+            withContext(NonCancellable){
+                delay(2000)
+                println("Finally gonna help me into this...")
 
+            }
+        }
     }
 
     // even after calling cancelable it is not canceling the coroutines,
