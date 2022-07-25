@@ -18,6 +18,8 @@ fun main() = runBlocking {
         // this is how you can achieve concurrency or say parallel execution.
         var getm:Deferred<Unit> = async {getmessageAsync()}
         var gets:Deferred<Unit> = async {sentMessageAsync()}
+        //WE CAN ALSO USE LAUNCH COROUTINE BUILDERS TO GET THE CONCURRENCY , BUT IN OUR CURRENT PROGRAM WE NEED,
+        // A RETURN VALUE AND LAUNCH DOES NOT PROVIDE RETURN VALUE AND THAT'S THE DIFFERANCE BETWEEN THEM.
     }
 
     println("I am from main- END and thread name is--- ${Thread.currentThread().name} time taken to finish is $time")
